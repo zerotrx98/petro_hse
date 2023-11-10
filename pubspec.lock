@@ -57,6 +57,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.17.2"
+  community_charts_common:
+    dependency: transitive
+    description:
+      name: community_charts_common
+      sha256: "20697244c826df0545237ebe01d61caa96a2a2e4d23c6f88890441636a4d5220"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
+  community_charts_flutter:
+    dependency: transitive
+    description:
+      name: community_charts_flutter
+      sha256: ca5bd07337e162daee13c19679f602cd8b3f704520d242beeebbc2e312f84f89
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
   convert:
     dependency: transitive
     description:
@@ -81,6 +97,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  d_chart:
+    dependency: "direct main"
+    description:
+      name: d_chart
+      sha256: "25383f0d0b71a3f540511573ac0603286b2d736ead55073d595b7f48764919e4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.2"
   data_table_2:
     dependency: "direct main"
     description:
@@ -131,6 +155,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.6.6"
+  image:
+    dependency: "direct main"
+    description:
+      name: image
+      sha256: "028f61960d56f26414eb616b48b04eb37d700cbe477b7fb09bf1d7ce57fd9271"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.3"
   intl:
     dependency: transitive
     description:
@@ -195,6 +227,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
+  petitparser:
+    dependency: transitive
+    description:
+      name: petitparser
+      sha256: cb3798bef7fc021ac45b308f4b51208a152792445cce0448c9a4ba5879dd8750
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.4.0"
   pointycastle:
     dependency: transitive
     description:
@@ -304,6 +344,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.1.4-beta"
+  xml:
+    dependency: transitive
+    description:
+      name: xml
+      sha256: "5bc72e1e45e941d825fd7468b9b4cc3b9327942649aeb6fc5cdbf135f0a86e84"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.3.0"
 sdks:
   dart: ">=3.1.3 <4.0.0"
   flutter: ">=3.13.0"

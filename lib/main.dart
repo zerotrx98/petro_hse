@@ -12,10 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: true,
-      initialRoute: Routes.homeScreen,
+      debugShowCheckedModeBanner: false,
+      initialRoute: Routes.loginScreen,
       getPages: Routes.pages,
       theme: ThemeData(
+        elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF13A89E))),
         primaryColor: Colors.red,
         appBarTheme: const AppBarTheme(
           color: Colors.white,

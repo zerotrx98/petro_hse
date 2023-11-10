@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:petro_hse/hse/const/widgets/initiateScreen_widgets/stepper.dart';
-import '../../const/widgets/initiateScreen_widgets/initiateScreen_widgets.dart';
+
 import '../../const/widgets/initiateScreen_widgets/initiate_feilds.dart';
 
 class NewInitiateScreen extends StatelessWidget {
@@ -32,7 +32,7 @@ class NewInitiateScreen extends StatelessWidget {
                     children: [
                       Icon(
                         Icons.document_scanner,
-                        color: Colors.blue.shade400,
+                        color: Color(0xFF13A89E),
                       ),
                       const SizedBox(
                         width: 5,
@@ -40,7 +40,7 @@ class NewInitiateScreen extends StatelessWidget {
                       Text(
                         "Initiate PTW Request",
                         style: TextStyle(
-                            color: Colors.blue.shade400,
+                            color: Color(0xFF13A89E),
                             fontWeight: FontWeight.bold),
                       )
                     ],

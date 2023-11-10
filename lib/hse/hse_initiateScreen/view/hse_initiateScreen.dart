@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:petro_hse/hse/const/widgets/initiateScreen_widgets/initiate_feilds.dart';
 
+import '../../../pactices.dart';
 import '../../const/widgets/initiateScreen_widgets/stepper.dart';
 
 class InitiateScreen extends StatelessWidget {
@@ -11,16 +12,18 @@ class InitiateScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "PTW Request",
           style: TextStyle(color: Colors.deepOrangeAccent),
         ),
         actions: [
           Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: GestureDetector(
-                onTap: () {},
-                child: CircleAvatar(
+                onTap: () {
+                  ServicesData.showUserDetails(context);
+                },
+                child: const CircleAvatar(
                   backgroundImage: NetworkImage(
                       "https://media.istockphoto.com/id/1369199360/photo/portrait-of-a-handsome-young-businessman-working-in-office.jpg?s=612x612&w=0&k=20&c=ujyGdu8jKI2UB5515XZA33Tt4DBhDU19dKSTUTMZvrg="),
                   radius: 20,
@@ -124,13 +127,15 @@ class InitiateScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            "Oil Rig Maintenance",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black54,
+                          Flexible(
+                            child: Text(
+                              "Oil Rig Maintenance ",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black54,
+                              ),
+                              overflow: TextOverflow.ellipsis,
                             ),
-                            overflow: TextOverflow.ellipsis,
                           ),
                           SizedBox(height: 5),
                           Text(

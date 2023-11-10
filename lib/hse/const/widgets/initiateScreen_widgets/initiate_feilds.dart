@@ -17,14 +17,14 @@ class InitiateFeilds extends StatelessWidget {
           color: Colors.grey.shade200, borderRadius: BorderRadius.circular(10)),
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
             child: Row(
               children: [
                 Text(
                   "Add Work Order",
                   style: TextStyle(
-                      color: Colors.blue.shade400, fontWeight: FontWeight.bold),
+                      color: Color(0xFF13A89E), fontWeight: FontWeight.bold),
                 )
               ],
             ),
