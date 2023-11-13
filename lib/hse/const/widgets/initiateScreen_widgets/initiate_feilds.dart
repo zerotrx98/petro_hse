@@ -18,7 +18,7 @@ class InitiateFeilds extends StatelessWidget {
       child: Column(
         children: [
           const Padding(
-            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
             child: Row(
               children: [
                 Text(
@@ -832,26 +832,31 @@ class Example extends StatelessWidget {
     "Cancellation & Archive": Icons.cancel,
   };
 
+   Example({super.key});
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 4,
       child: Column(
         children: <Widget>[
-          ButtonsTabBar(
-            elevation: 010,
-            height: Get.height * 0.065,
-            backgroundColor: Colors.grey.shade200,
-            unselectedBackgroundColor: const Color(0xFF13A89E),
-            unselectedLabelStyle: const TextStyle(color: Colors.white),
-            labelStyle: const TextStyle(
-                color: Color(0xFF13A89E), fontWeight: FontWeight.bold),
-            tabs: [
-              for (var tabName in tabIcons.keys)
-                Tab(
-                  text: tabName,
-                ),
-            ],
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            child: ButtonsTabBar(
+              elevation: 010,
+              height: Get.height * 0.065,
+              backgroundColor: Colors.grey.shade200,
+              unselectedBackgroundColor: const Color(0xFF13A89E),
+              unselectedLabelStyle: const TextStyle(color: Colors.white),
+              labelStyle: const TextStyle(
+                  color: Color(0xFF13A89E), fontWeight: FontWeight.bold),
+              tabs: [
+                for (var tabName in tabIcons.keys)
+                  Tab(
+                    text: tabName,
+                  ),
+              ],
+            ),
           ),
           Expanded(
             child: TabBarView(
@@ -870,8 +875,8 @@ class Example extends StatelessWidget {
                           child: InitiateFeilds(),
                         ),
                       ),
-                      ExpandableListItem(
-                        colors: const Color(0xFF13A89E),
+                      const ExpandableListItem(
+                        colors: Color(0xFF13A89E),
                         title: "Identify Activities",
                         icon: Icons.person,
                         content:
@@ -883,8 +888,8 @@ class Example extends StatelessWidget {
                         icon: Icons.person,
                         content: InitiateFeilds(),
                       ),
-                      ExpandableListItem(
-                        colors: const Color(0xFF13A89E),
+                      const ExpandableListItem(
+                        colors: Color(0xFF13A89E),
                         title: "Gas Test Requirements",
                         icon: Icons.person,
                         content:
@@ -896,7 +901,7 @@ class Example extends StatelessWidget {
                         icon: Icons.person,
                         content: InitiateFeilds(),
                       ),
-                      ExpandableListItem(
+                      const ExpandableListItem(
                         colors: Colors.deepOrangeAccent,
                         title: "Agreement of other custodians",
                         icon: Icons.person,
@@ -914,8 +919,8 @@ class Example extends StatelessWidget {
                         icon: Icons.person,
                         content: InitiateFeilds(),
                       ),
-                      ExpandableListItem(
-                        colors: const Color(0xFF13A89E),
+                      const ExpandableListItem(
+                        colors: Color(0xFF13A89E),
                         title: "Brief of Permit Holder",
                         icon: Icons.person,
                         content:
@@ -927,8 +932,8 @@ class Example extends StatelessWidget {
                         icon: Icons.person,
                         content: InitiateFeilds(),
                       ),
-                      ExpandableListItem(
-                        colors: const Color(0xFF13A89E),
+                      const ExpandableListItem(
+                        colors: Color(0xFF13A89E),
                         title: "Isolation",
                         icon: Icons.person,
                         content:
@@ -940,7 +945,7 @@ class Example extends StatelessWidget {
                         icon: Icons.person,
                         content: InitiateFeilds(),
                       ),
-                      ExpandableListItem(
+                      const ExpandableListItem(
                         colors: Colors.deepOrangeAccent,
                         title: "Validate Permit",
                         icon: Icons.person,
@@ -958,8 +963,8 @@ class Example extends StatelessWidget {
                         icon: Icons.person,
                         content: InitiateFeilds(),
                       ),
-                      ExpandableListItem(
-                        colors: const Color(0xFF13A89E),
+                      const ExpandableListItem(
+                        colors: Color(0xFF13A89E),
                         title: "Work Completion",
                         icon: Icons.person,
                         content:
@@ -976,8 +981,8 @@ class Example extends StatelessWidget {
                         icon: Icons.person,
                         content: InitiateFeilds(),
                       ),
-                      ExpandableListItem(
-                        colors: const Color(0xFF13A89E),
+                      const ExpandableListItem(
+                        colors: Color(0xFF13A89E),
                         title: "Cancellation by Area Authority",
                         icon: Icons.person,
                         content:
@@ -1005,7 +1010,7 @@ class ExpandableListItem extends StatefulWidget {
   final Widget content;
   final Color colors;
 
-  ExpandableListItem({
+  const ExpandableListItem({
     super.key,
     required this.title,
     required this.icon,
@@ -1069,7 +1074,7 @@ class _ExpandableListItemState extends State<ExpandableListItem> {
 class YourLargeWidgetHere extends StatelessWidget {
   final String content;
 
-  YourLargeWidgetHere(this.content);
+  const YourLargeWidgetHere(this.content, {super.key});
 
   @override
   Widget build(BuildContext context) {

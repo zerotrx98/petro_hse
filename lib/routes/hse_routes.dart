@@ -15,6 +15,6 @@ class Routes {
     GetPage(name: homeScreen, page: () => const HomeScreen()),
     GetPage(name: newInitiateScreen, page: () => const NewInitiateScreen()),
     GetPage(name: initiateScreen, page: () => const InitiateScreen()),
-    GetPage(name: loginScreen, page: () => LoginScreen())
+    GetPage(name: loginScreen, page: () => const LoginScreen())
   ];
 }
