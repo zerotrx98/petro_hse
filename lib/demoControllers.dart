@@ -9,13 +9,12 @@ class CalendarController extends GetxController {
     DateTime lastDay = DateTime(today.year, today.month + 1, today.day);
 
     // Initialize the calendar controller
-    CalendarController _calendarController = CalendarController();
 
     Get.dialog(
       Dialog(
         child: Container(
           height: 400,
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: TableCalendar(
             // calendarController: _calendarController,
             focusedDay: today,

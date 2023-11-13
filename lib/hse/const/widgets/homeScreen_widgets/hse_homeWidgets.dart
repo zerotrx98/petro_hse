@@ -5,30 +5,52 @@ class HomeCards extends StatelessWidget {
   final String auditVal;
   final int auditNum;
   final Color? colors;
-  const HomeCards(
-      {super.key,
-      required this.auditVal,
-      required this.auditNum,
-      required this.colors});
+
+  const HomeCards({
+    super.key,
+    required this.auditVal,
+    required this.auditNum,
+    required this.colors,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: Get.height * 0.08,
-      decoration:
-          BoxDecoration(color: colors, borderRadius: BorderRadius.circular(10)),
+      decoration: BoxDecoration(
+        color: colors,
+        borderRadius: BorderRadius.circular(10),
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text(auditNum.toString()),
+              Container(
+                height: 30, // Adjust the size of the circle as needed
+                width: 30, // Adjust the size of the circle as needed
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.white, // You can change the color of the circle
+                ),
+                child: Center(
+                  child: Text(
+                    auditNum.toString(),
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black54, // You can use the same color as the background
+                    ),
+                  ),
+                ),
+              ),
               Text(
-                auditVal,
+                auditVal.toUpperCase(),
                 style: const TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.black54),
-              )
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black54,
+                ),
+              ),
             ],
           ),
         ],
@@ -36,42 +58,3 @@ class HomeCards extends StatelessWidget {
     );
   }
 }
-///
-//
-// class CustomDrawer extends StatelessWidget {
-//    CustomDrawer({super.key, });
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Drawer(
-//       child: ListView(
-//
-//         children: <Widget>[
-//           UserAccountsDrawerHeader(
-//             decoration: BoxDecoration(
-//               color: Colors.grey
-//             ),
-//             currentAccountPicture: CircleAvatar(
-//               backgroundImage: AssetImage("assets/logo.png"), // Replace with your logo image
-//             ),
-//             accountName: Text("Your App Name"),
-//             accountEmail: Text("Welcome to Your App"),
-//           ),
-//           ListTile(
-//             title: Text("Permit to Work Home"),
-//             onTap: () {
-//               // Add your logic for navigating to "Permit to Work Home" screen
-//             },
-//           ),
-//           ListTile(
-//             title: Text("Initiate PTW Request"),
-//             onTap: () {
-//               // Add your logic for navigating to "Initiate PTW Request" screen
-//             },
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-

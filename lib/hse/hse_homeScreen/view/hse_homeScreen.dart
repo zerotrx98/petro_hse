@@ -3,6 +3,7 @@ import 'package:d_chart/ordinal/bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:petro_hse/hse/const/widgets/homeScreen_widgets/hse_homeWidgets.dart';
+import 'package:petro_hse/pactices.dart';
 import 'package:petro_hse/routes/hse_routes.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -11,65 +12,94 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Row(
+        children: [
+          Text("Petro",style: TextStyle(
+            color: Color(0xFF13A89E)
+          ),),   Text("E",style: TextStyle(
+              color: Colors.red          ),),
+          Text("Permit",style: TextStyle(
+              color: Color(0xFF13A89E)
+          ),),
+        ],
+      ),
+        leading: Container(
+
+          decoration: const BoxDecoration(
+              image:
+                  DecorationImage(image: AssetImage("assets/logod.png",))),
+        ),
+        actions: [
+          Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 5),
+              child: GestureDetector(
+                onTap: () {
+                  ServicesData.showUserDetails(context);
+                },
+                child: const CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      "https://media.istockphoto.com/id/1369199360/photo/portrait-of-a-handsome-young-businessman-working-in-office.jpg?s=612x612&w=0&k=20&c=ujyGdu8jKI2UB5515XZA33Tt4DBhDU19dKSTUTMZvrg="),
+                  radius: 20,
+                ),
+              ))
+        ],
+        backgroundColor: Colors.white,
+        elevation: 0,
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              height: 20,
-              width: double.infinity,
-              decoration: BoxDecoration(color: Colors.red),
-            ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Expanded(
                       child: HomeCards(
                     auditVal: 'request permit',
-                    auditNum: 130,
-                    colors: Colors.cyan,
-                  )),
+                        auditNum: 130,
+                        colors: Colors.cyan,
+                      )),
                   const SizedBox(
                     width: 10,
                   ),
                   Expanded(
                       child: HomeCards(
-                    auditVal: 'request permit',
-                    auditNum: 120,
-                    colors: Colors.yellow.shade200,
-                  )),
+                        auditVal: 'request permit',
+                        auditNum: 120,
+                        colors: Colors.yellow.shade200,
+                      )),
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
                       child: HomeCards(
-                    auditVal: 'demo permit',
-                    auditNum: 110,
-                    colors: Colors.red.shade200,
-                  )),
+                        auditVal: 'demo permit',
+                        auditNum: 110,
+                        colors: Colors.red.shade200,
+                      )),
                   const SizedBox(
                     width: 10,
                   ),
                   Expanded(
                       child: HomeCards(
-                    auditVal: 'demo permit',
-                    auditNum: 1 - 0,
-                    colors: Colors.green.shade200,
-                  )),
+                        auditVal: 'demo permit',
+                        auditNum: 1 - 0,
+                        colors: Colors.green.shade200,
+                      )),
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade100,
+                  color: Colors.grey.shade200,
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
                     color: Colors.grey.shade200, // Border color
@@ -80,46 +110,17 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             "Month Wise Permit",
                             style: TextStyle(
-                                color: Colors.blue.shade400,
+                                color: Color(0xFF13A89E),
                                 fontWeight: FontWeight.bold),
                           )
                         ],
                       ),
-                      // SimpleBarChart(
-                      //   listOfHorizontalBarData: [
-                      //     HorizontalDetailsModel(
-                      //       name: 'Jan',
-                      //       color: const Color(0xFFEB7735),
-                      //       size: 73,
-                      //     ),
-                      //     HorizontalDetailsModel(
-                      //       name: 'Feb',
-                      //       color: const Color(0xFFEB7735),
-                      //       size: 92,
-                      //     ),
-                      //     HorizontalDetailsModel(
-                      //       name: 'Mar',
-                      //       color: const Color(0xFFFBBC05),
-                      //       size: 120,
-                      //     ),
-                      //     HorizontalDetailsModel(
-                      //       name: 'Apr',
-                      //       color: const Color(0xFFFBBC05),
-                      //       size: 86,
-                      //     ),
-                      //     HorizontalDetailsModel(
-                      //       name: 'May',
-                      //       color: const Color(0xFFFBBC05),
-                      //       size: 64,
-                      //     ),
-                      //   ],
-                      //   verticalInterval: 50,
-                      // ),
+
                       AspectRatio(
                         aspectRatio: 15 / 11,
                         child: DChartBarO(
@@ -132,10 +133,10 @@ class HomeScreen extends StatelessWidget {
                                     domain: 'Jan',
                                     measure: 4,
                                     color: Colors.red),
-                                OrdinalData(domain: 'Feb', measure: 6),
+                                OrdinalData(domain: 'Feb', measure: 10),
                                 OrdinalData(domain: 'Mar', measure: 8),
-                                OrdinalData(domain: 'Apr', measure: 10),
-                                OrdinalData(domain: 'May', measure: 12),
+                                OrdinalData(domain: 'Apr', measure: 15),
+                                OrdinalData(domain: 'May', measure: 11),
                                 OrdinalData(domain: 'Jun', measure: 14),
                               ],
                             ),
@@ -148,12 +149,12 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              padding: const EdgeInsets.symmetric( horizontal: 5),
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey.shade100),
+                    color: Colors.grey.shade200),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -161,11 +162,11 @@ class HomeScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
+                          const Text(
                             "PTW Request",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Colors.blue.shade400),
+                                color: Color(0xFF13A89E)),
                           ),
                           ElevatedButton(
                             onPressed: () {
@@ -191,7 +192,7 @@ class HomeScreen extends StatelessWidget {
                             headingRowColor: MaterialStateProperty.all<Color>(
                                 Colors.cyan.shade100),
                             decoration:
-                                BoxDecoration(color: Colors.grey.shade200),
+                            BoxDecoration(color: Colors.grey.shade200),
                             columnSpacing: 20,
                             columns: [
                               DataColumn(
@@ -234,9 +235,9 @@ class HomeScreen extends StatelessWidget {
                                     Center(
                                       child: Column(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                        MainAxisAlignment.center,
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Request Initiation - Add Work Description',
@@ -260,9 +261,9 @@ class HomeScreen extends StatelessWidget {
                                     Center(
                                       child: Column(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                        MainAxisAlignment.center,
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Cancellation & Archive  - Lesson Learned',
@@ -284,9 +285,9 @@ class HomeScreen extends StatelessWidget {
                                     Center(
                                       child: Column(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                        MainAxisAlignment.center,
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Request Initiation - Add Work Description',
@@ -310,9 +311,9 @@ class HomeScreen extends StatelessWidget {
                                     Center(
                                       child: Column(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                        MainAxisAlignment.center,
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Request Initiation - Add Work Description',

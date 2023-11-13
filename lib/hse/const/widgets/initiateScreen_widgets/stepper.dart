@@ -8,24 +8,24 @@ class MyStepper extends StatefulWidget {
 }
 
 class _MyStepperState extends State<MyStepper> {
-  int activeStep = 0;
+  int activeStep = 2;
 
   @override
   Widget build(BuildContext context) {
     return EasyStepper(
+      fitWidth: true,
       activeStep: activeStep,
       stepShape: StepShape.rRectangle,
       stepBorderRadius: 15,
       borderThickness: 2,
-      stepRadius: 28,
       finishedStepBorderColor: Colors.green,
-      finishedStepTextColor: Colors.deepOrange,
+      finishedStepTextColor: Colors.grey,
       finishedStepBackgroundColor: Colors.green,
-      activeStepIconColor: Colors.deepOrange,
+      activeStepIconColor: Colors.grey,
       showLoadingAnimation: false,
       finishedStepIconColor: Colors.white,
-      unreachedStepBorderColor: Colors.orange,
-      lineStyle: LineStyle(
+      unreachedStepBorderColor: Colors.grey,
+      lineStyle: const LineStyle(
         lineType: LineType.dashed,
         defaultLineColor: Colors.green,
       ),
@@ -33,8 +33,8 @@ class _MyStepperState extends State<MyStepper> {
       steps: [
         EasyStep(
             icon: activeStep >= 0
-                ? const Icon(CupertinoIcons.check_mark)
-                : const Icon(CupertinoIcons.clear),
+                ? const Icon(Icons.check_circle_outlined)
+                : const Icon(Icons.close_rounded),
             customTitle: const Column(
               children: [
                 Text(
@@ -55,8 +55,8 @@ class _MyStepperState extends State<MyStepper> {
             )),
         EasyStep(
             icon: activeStep >= 1
-                ? const Icon(CupertinoIcons.check_mark)
-                : const Icon(CupertinoIcons.clear),
+                ? const Icon(Icons.check_circle_outlined)
+                : const Icon(Icons.close_rounded),
             customTitle: const Column(
               children: [
                 Text(
@@ -77,8 +77,8 @@ class _MyStepperState extends State<MyStepper> {
             )),
         EasyStep(
             icon: activeStep >= 2
-                ? const Icon(CupertinoIcons.check_mark)
-                : const Icon(CupertinoIcons.clear),
+                ? const Icon(Icons.check_circle_outlined)
+                : const Icon(Icons.close_rounded),
             customTitle: const Column(
               children: [
                 Text(
@@ -99,8 +99,8 @@ class _MyStepperState extends State<MyStepper> {
             )),
         EasyStep(
             icon: activeStep >= 3
-                ? const Icon(CupertinoIcons.check_mark)
-                : const Icon(CupertinoIcons.clear),
+                ? const Icon(Icons.check_circle_outlined)
+                : const Icon(Icons.close_rounded),
             customTitle: const Column(
               children: [
                 Text(
