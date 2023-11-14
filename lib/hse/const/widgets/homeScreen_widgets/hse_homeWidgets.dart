@@ -35,11 +35,14 @@ class HomeCards extends StatelessWidget {
                   color: Colors.white, // You can change the color of the circle
                 ),
                 child: Center(
-                  child: Text(
-                    auditNum.toString(),
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black54, // You can use the same color as the background
+                  child: Flexible(
+                    child: Text(
+                      auditNum.toString(),
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors
+                            .black54, // You can use the same color as the background
+                      ),
                     ),
                   ),
                 ),
@@ -50,6 +53,7 @@ class HomeCards extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.black54,
                 ),
+                overflow: TextOverflow.visible,
               ),
             ],
           ),
