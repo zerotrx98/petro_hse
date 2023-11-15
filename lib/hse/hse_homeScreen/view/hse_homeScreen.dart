@@ -12,17 +12,23 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Row(
-        children: [
-          Text("Petro",style: TextStyle(
-            color: Color(0xFF13A89E)
-          ),),   Text("E",style: TextStyle(
-              color: Colors.red          ),),
-          Text("Permit",style: TextStyle(
-              color: Color(0xFF13A89E)
-          ),),
-        ],
-      ),
+      appBar: AppBar(
+        title: const Row(
+          children: [
+            Text(
+              "Petro",
+              style: TextStyle(color: Color(0xFF13A89E)),
+            ),
+            Text(
+              "E",
+              style: TextStyle(color: Colors.red),
+            ),
+            Text(
+              "Permit",
+              style: TextStyle(color: Color(0xFF13A89E)),
+            ),
+          ],
+        ),
         leading: Container(
 
           decoration: const BoxDecoration(
@@ -49,49 +55,66 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Expanded(
-                      child: HomeCards(
-                    auditVal: 'request permit',
-                        auditNum: 130,
-                        colors: Colors.cyan,
-                      )),
-                  const SizedBox(
+                  Expanded(
+                    child: HomeCards(
+                      auditVal: 'request initiation',
+                      auditNum: 130,
+                      colors: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [Color(0xFF1b7770), Color(0xFF50e4ca)],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
                     width: 10,
                   ),
                   Expanded(
                       child: HomeCards(
-                        auditVal: 'request permit',
-                        auditNum: 120,
-                        colors: Colors.yellow.shade200,
-                      )),
+                    auditVal: 'permit authorisation',
+                    auditNum: 120,
+                    colors: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [Color(0xFF265ed7), Color(0xFF638aff)],
+                    ),
+                  )),
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
                       child: HomeCards(
-                        auditVal: 'demo permit',
-                        auditNum: 110,
-                        colors: Colors.red.shade200,
-                      )),
-                  const SizedBox(
+                    auditVal: 'Issue & control',
+                    auditNum: 110,
+                    colors: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [Color(0xFFff1212), Color(0xFFff716b)],
+                    ),
+                  )),
+                  SizedBox(
                     width: 10,
                   ),
                   Expanded(
                       child: HomeCards(
-                        auditVal: 'demo permit',
-                        auditNum: 1 - 0,
-                        colors: Colors.green.shade200,
-                      )),
+                    auditVal: 'CANCELLATION & Archive',
+                    auditNum: 1 - 0,
+                    colors: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [Color(0xFFff8b01), Color(0xFFffbd6f)],
+                    ),
+                  )),
                 ],
               ),
             ),
