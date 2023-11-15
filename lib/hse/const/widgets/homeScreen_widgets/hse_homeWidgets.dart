@@ -50,7 +50,7 @@ class HomeCards extends StatelessWidget {
                   auditVal.toUpperCase(),
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Colors.black54,
+                    color: Colors.white,
                   ),
                   textAlign: TextAlign.center,
                 ),

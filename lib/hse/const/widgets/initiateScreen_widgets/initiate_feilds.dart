@@ -832,7 +832,7 @@ class Example extends StatelessWidget {
     "Cancellation & Archive": Icons.cancel,
   };
 
-   Example({super.key});
+  Example({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -840,22 +840,275 @@ class Example extends StatelessWidget {
       length: 4,
       child: Column(
         children: <Widget>[
+          ButtonsTabBar(
+            height: Get.height * 0.11,
+            backgroundColor: Colors.grey.shade50,
+            unselectedBackgroundColor: Colors.grey.shade50,
+            unselectedLabelStyle: TextStyle(color: Colors.grey.shade50),
+            labelStyle: const TextStyle(
+                color: Color(0xFF13A89E), fontWeight: FontWeight.bold),
+            tabs: [
+              Tab(
+                // text: tabName,
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        Expanded(
+                          flex: 6,
+                          child: Container(
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                                color: Colors.green,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: const Icon(
+                              Icons.check_circle_outlined,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Expanded(
+                          flex: 3,
+                          child: Text(
+                            "Initiation",
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                        height: Get.height * 0.05, child: const Text(" ---"))
+                  ],
+                ),
+              ),
+              Tab(
+                // text: tabName,
+                child: Row(
+                  children: [
+                    SizedBox(
+                        height: Get.height * 0.05, child: const Text("---")),
+                    Column(
+                      children: [
+                        Expanded(
+                          flex: 6,
+                          child: Container(
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                                color: Colors.green,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: const Icon(
+                              Icons.check_circle_outlined,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        const Expanded(
+                          flex: 3,
+                          child: Text(
+                            "Authorisation",
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                        height: Get.height * 0.05, child: const Text("---"))
+                  ],
+                ),
+              ),
+              Tab(
+                // text: tabName,
+                child: Row(
+                  children: [
+                    SizedBox(
+                        height: Get.height * 0.05, child: const Text("---")),
+                    Column(
+                      children: [
+                        Expanded(
+                          flex: 6,
+                          child: Container(
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                                color: Colors.green,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: const Icon(
+                              Icons.check_circle_outlined,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        const Expanded(
+                          flex: 3,
+                          child: Text(
+                            "Control",
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                        height: Get.height * 0.05, child: const Text("---"))
+                  ],
+                ),
+              ),
+              Tab(
+                // text: tabName,
+                child: Row(
+                  children: [
+                    SizedBox(
+                        height: Get.height * 0.05, child: const Text("---")),
+                    Column(
+                      children: [
+                        Expanded(
+                          flex: 6,
+                          child: Container(
+                            padding: EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                                color: Colors.orangeAccent,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: const Icon(
+                              Icons.multiple_stop,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        const Expanded(
+                          flex: 3,
+                          child: Text(
+                            "Cancellation",
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5),
-            child: ButtonsTabBar(
-              elevation: 010,
-              height: Get.height * 0.065,
-              backgroundColor: Colors.grey.shade200,
-              unselectedBackgroundColor: const Color(0xFF13A89E),
-              unselectedLabelStyle: const TextStyle(color: Colors.white),
-              labelStyle: const TextStyle(
-                  color: Color(0xFF13A89E), fontWeight: FontWeight.bold),
-              tabs: [
-                for (var tabName in tabIcons.keys)
-                  Tab(
-                    text: tabName,
-                  ),
-              ],
+            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+            child: Container(
+              height: Get.height * 0.09,
+              width: Get.width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.grey.shade200,
+              ),
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Work Order Title",
+                            style: TextStyle(
+                              color: Colors.black54,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            "Requested No",
+                            style: TextStyle(
+                              color: Colors.black54,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            "Permit Type",
+                            style: TextStyle(
+                              color: Colors.black54,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            ":",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black54,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            ":",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black54,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            ":",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black54,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      flex: 6,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Flexible(
+                            child: Text(
+                              "Oil Rig Maintenance",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black54,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            "Class B",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black54,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            "548/2023",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black54,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
           Expanded(

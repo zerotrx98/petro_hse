@@ -12,17 +12,23 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Row(
-        children: [
-          Text("Petro",style: TextStyle(
-            color: Color(0xFF13A89E)
-          ),),   Text("E",style: TextStyle(
-              color: Colors.red          ),),
-          Text("Permit",style: TextStyle(
-              color: Color(0xFF13A89E)
-          ),),
-        ],
-      ),
+      appBar: AppBar(
+        title: const Row(
+          children: [
+            Text(
+              "Petro",
+              style: TextStyle(color: Color(0xFF13A89E)),
+            ),
+            Text(
+              "E",
+              style: TextStyle(color: Colors.red),
+            ),
+            Text(
+              "Permit",
+              style: TextStyle(color: Color(0xFF13A89E)),
+            ),
+          ],
+        ),
         leading: Container(
 
           decoration: const BoxDecoration(
@@ -49,12 +55,12 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Expanded(
+                  Expanded(
                     child: HomeCards(
                       auditVal: 'request initiation',
                       auditNum: 130,
@@ -65,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 10,
                   ),
                   Expanded(
@@ -81,8 +87,8 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -96,7 +102,7 @@ class HomeScreen extends StatelessWidget {
                       colors: [Color(0xFFff1212), Color(0xFFff716b)],
                     ),
                   )),
-                  const SizedBox(
+                  SizedBox(
                     width: 10,
                   ),
                   Expanded(
