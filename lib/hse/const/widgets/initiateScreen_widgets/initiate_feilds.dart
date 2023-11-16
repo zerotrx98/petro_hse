@@ -1,6 +1,7 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:petro_hse/hse/hse_initiateScreen/view/workSite_examination.dart';
 
 import '../../../../demoControllers.dart';
 
@@ -1156,11 +1157,11 @@ class Example extends StatelessWidget {
                         content:
                             YourLargeWidgetHere("Identify Activities Content"),
                       ),
-                      ExpandableListItem(
+                      const ExpandableListItem(
                         colors: Colors.deepOrangeAccent,
                         title: "Work Site Examination",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: WorkSite(),
                       ),
                       const ExpandableListItem(
                         colors: Colors.deepOrangeAccent,
