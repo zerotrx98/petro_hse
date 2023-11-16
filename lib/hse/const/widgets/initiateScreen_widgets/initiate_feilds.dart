@@ -841,7 +841,9 @@ class Example extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ButtonsTabBar(
-            height: Get.height * 0.11,
+            physics: NeverScrollableScrollPhysics(),
+            contentPadding: EdgeInsets.symmetric(horizontal: 5),
+            height: Get.height * 0.07,
             backgroundColor: Colors.grey.shade50,
             unselectedBackgroundColor: Colors.grey.shade50,
             unselectedLabelStyle: TextStyle(color: Colors.grey.shade50),
@@ -867,20 +869,14 @@ class Example extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Expanded(
-                          flex: 3,
-                          child: Text(
-                            "Initiation",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                        )
                       ],
                     ),
                     SizedBox(
-                        height: Get.height * 0.05, child: const Text(" ---"))
+                        height: Get.height * 0.02,
+                        child: const Text(
+                          " ----",
+                          style: TextStyle(color: Colors.green),
+                        ))
                   ],
                 ),
               ),
@@ -889,7 +885,9 @@ class Example extends StatelessWidget {
                 child: Row(
                   children: [
                     SizedBox(
-                        height: Get.height * 0.05, child: const Text("---")),
+                        height: Get.height * 0.02,
+                        child: const Text("----",
+                            style: TextStyle(color: Colors.green))),
                     Column(
                       children: [
                         Expanded(
@@ -905,20 +903,12 @@ class Example extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        const Expanded(
-                          flex: 3,
-                          child: Text(
-                            "Authorisation",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                        )
                       ],
                     ),
                     SizedBox(
-                        height: Get.height * 0.05, child: const Text("---"))
+                        height: Get.height * 0.02,
+                        child: const Text("----",
+                            style: TextStyle(color: Colors.green)))
                   ],
                 ),
               ),
@@ -927,7 +917,9 @@ class Example extends StatelessWidget {
                 child: Row(
                   children: [
                     SizedBox(
-                        height: Get.height * 0.05, child: const Text("---")),
+                        height: Get.height * 0.02,
+                        child: const Text("----",
+                            style: TextStyle(color: Colors.green))),
                     Column(
                       children: [
                         Expanded(
@@ -943,20 +935,12 @@ class Example extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        const Expanded(
-                          flex: 3,
-                          child: Text(
-                            "Control",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                        )
                       ],
                     ),
                     SizedBox(
-                        height: Get.height * 0.05, child: const Text("---"))
+                        height: Get.height * 0.02,
+                        child: const Text("----   ",
+                            style: TextStyle(color: Colors.green)))
                   ],
                 ),
               ),
@@ -965,7 +949,9 @@ class Example extends StatelessWidget {
                 child: Row(
                   children: [
                     SizedBox(
-                        height: Get.height * 0.05, child: const Text("---")),
+                        height: Get.height * 0.02,
+                        child: const Text("----",
+                            style: TextStyle(color: Colors.green))),
                     Column(
                       children: [
                         Expanded(
@@ -981,22 +967,44 @@ class Example extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        const Expanded(
-                          flex: 3,
-                          child: Text(
-                            "Cancellation",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                        ),
                       ],
                     ),
                   ],
                 ),
               ),
             ],
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  children: [
+                    Text("Request"),
+                    Text("Initiation"),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text("Permit"),
+                    Text("Authorisation"),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text("Issue &"),
+                    Text("Control"),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text("Cancellation"),
+                    Text("& Archive"),
+                  ],
+                )
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
