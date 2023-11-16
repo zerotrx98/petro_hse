@@ -5,8 +5,8 @@ import 'package:petro_hse/hse/hse_initiateScreen/view/workSite_examination.dart'
 
 import '../../../../demoControllers.dart';
 
-class InitiateFeilds extends StatelessWidget {
-  InitiateFeilds({super.key});
+class InitiateFields extends StatelessWidget {
+  InitiateFields({super.key});
 
   final CalendarController controller = Get.put(CalendarController());
 
@@ -1134,29 +1134,25 @@ class Example extends StatelessWidget {
                         content: Padding(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 5, vertical: 5),
-                          child: InitiateFeilds(),
+                          child: InitiateFields(),
                         ),
                       ),
                       const ExpandableListItem(
-                        colors: Color(0xFF13A89E),
-                        title: "Identify Activities",
-                        icon: Icons.person,
-                        content:
-                            YourLargeWidgetHere("Identify Activities Content"),
-                      ),
+                          colors: Color(0xFF13A89E),
+                          title: "Identify Activities",
+                          icon: Icons.person,
+                          content: IdentifyActivities()),
                       ExpandableListItem(
                         colors: const Color(0xFF13A89E),
                         title: "Attach Certificates",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: CertificateForm(),
                       ),
-                      const ExpandableListItem(
-                        colors: Color(0xFF13A89E),
-                        title: "Gas Test Requirements",
-                        icon: Icons.person,
-                        content:
-                            YourLargeWidgetHere("Identify Activities Content"),
-                      ),
+                      ExpandableListItem(
+                          colors: Color(0xFF13A89E),
+                          title: "Gas Test Requirements",
+                          icon: Icons.person,
+                          content: GasSelectionScreen()),
                       const ExpandableListItem(
                         colors: Colors.deepOrangeAccent,
                         title: "Work Site Examination",
@@ -1179,7 +1175,7 @@ class Example extends StatelessWidget {
                         colors: const Color(0xFF13A89E),
                         title: "Authorisation",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: InitiateFields(),
                       ),
                       const ExpandableListItem(
                         colors: Color(0xFF13A89E),
@@ -1192,7 +1188,7 @@ class Example extends StatelessWidget {
                         colors: const Color(0xFF13A89E),
                         title: "Gas Test ",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: InitiateFields(),
                       ),
                       const ExpandableListItem(
                         colors: Color(0xFF13A89E),
@@ -1205,7 +1201,7 @@ class Example extends StatelessWidget {
                         colors: const Color(0xFF13A89E),
                         title: "Confirmation by PH",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: InitiateFields(),
                       ),
                       const ExpandableListItem(
                         colors: Colors.deepOrangeAccent,
@@ -1223,7 +1219,7 @@ class Example extends StatelessWidget {
                         colors: Colors.deepOrangeAccent,
                         title: "Accept Permit",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: InitiateFields(),
                       ),
                       const ExpandableListItem(
                         colors: Color(0xFF13A89E),
@@ -1241,7 +1237,7 @@ class Example extends StatelessWidget {
                         colors: const Color(0xFF13A89E),
                         title: "Permit Return by PH",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: InitiateFields(),
                       ),
                       const ExpandableListItem(
                         colors: Color(0xFF13A89E),
@@ -1254,7 +1250,7 @@ class Example extends StatelessWidget {
                         colors: const Color(0xFF13A89E),
                         title: "Lessons learned",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: InitiateFields(),
                       ),
                     ],
                   ),
