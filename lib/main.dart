@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         primaryColor: Colors.red,
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Color(0xFF13A89E), // Set the default icon color
         ),
         appBarTheme: const AppBarTheme(
@@ -31,19 +31,19 @@ class MyApp extends StatelessWidget {
             color: Color(0xFF13A89E),
           ),
         ),
-        inputDecorationTheme: InputDecorationTheme(
-          labelStyle: const TextStyle(
+        inputDecorationTheme: const InputDecorationTheme(
+          labelStyle: TextStyle(
             color: Color(0xFF13A89E),
           ),
-          fillColor: Colors.grey[200],
+          fillColor: Colors.white,
           filled: true,
-          border: const OutlineInputBorder(
+          border: OutlineInputBorder(
             borderSide: BorderSide(color: Color(0xFF13A89E)),
           ),
-          enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: Color(0xFF13A89E)),
-          ),
-          focusedBorder: const OutlineInputBorder(
+          // enabledBorder: const OutlineInputBorder(
+          //   borderSide: BorderSide(color: Color(0xFF13A89E)),
+          // ),
+          focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Color(0xFF13A89E)),
           ),
         ),

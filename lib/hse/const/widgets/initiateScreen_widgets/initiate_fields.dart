@@ -1,9 +1,10 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:petro_hse/hse/hse_initiateScreen/view/workSite_examination.dart';
+import 'package:petro_hse/hse/hse_initiateScreen/view/requestInitiation.dart';
 
 import '../../../../demoControllers.dart';
+import '../../../hse_initiateScreen/view/permit_authorisation.dart';
 
 class InitiateFields extends StatelessWidget {
   InitiateFields({super.key});
@@ -1137,7 +1138,7 @@ class Example extends StatelessWidget {
                           child: InitiateFields(),
                         ),
                       ),
-                      const ExpandableListItem(
+                      ExpandableListItem(
                           colors: Color(0xFF13A89E),
                           title: "Identify Activities",
                           icon: Icons.person,
@@ -1148,12 +1149,12 @@ class Example extends StatelessWidget {
                         icon: Icons.person,
                         content: CertificateForm(),
                       ),
-                      ExpandableListItem(
+                      const ExpandableListItem(
                           colors: Color(0xFF13A89E),
                           title: "Gas Test Requirements",
                           icon: Icons.person,
                           content: GasSelectionScreen()),
-                      const ExpandableListItem(
+                      ExpandableListItem(
                         colors: Colors.deepOrangeAccent,
                         title: "Work Site Examination",
                         icon: Icons.person,
@@ -1163,8 +1164,7 @@ class Example extends StatelessWidget {
                         colors: Colors.deepOrangeAccent,
                         title: "Agreement of other custodians",
                         icon: Icons.person,
-                        content:
-                            YourLargeWidgetHere("Identify Activities Content"),
+                        content: AgreementOfCustodian(),
                       ),
                     ],
                   ),
@@ -1175,20 +1175,19 @@ class Example extends StatelessWidget {
                         colors: const Color(0xFF13A89E),
                         title: "Authorisation",
                         icon: Icons.person,
-                        content: InitiateFields(),
+                        content: Authorisation(),
                       ),
-                      const ExpandableListItem(
+                      ExpandableListItem(
                         colors: Color(0xFF13A89E),
                         title: "Brief of Permit Holder",
                         icon: Icons.person,
-                        content:
-                            YourLargeWidgetHere("Identify Activities Content"),
+                        content: PermitHolder(),
                       ),
                       ExpandableListItem(
                         colors: const Color(0xFF13A89E),
                         title: "Gas Test ",
                         icon: Icons.person,
-                        content: InitiateFields(),
+                        content: GasTest(),
                       ),
                       const ExpandableListItem(
                         colors: Color(0xFF13A89E),
