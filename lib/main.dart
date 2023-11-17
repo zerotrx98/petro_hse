@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +17,34 @@ class MyApp extends StatelessWidget {
       getPages: Routes.pages,
       theme: ThemeData(
         elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF13A89E))),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xFF13A89E),
+          ),
+        ),
         primaryColor: Colors.red,
+        iconTheme: const IconThemeData(
+          color: Color(0xFF13A89E), // Set the default icon color
+        ),
         appBarTheme: const AppBarTheme(
-          // titleTextStyle: TextStyle(color: Color(0xFF13A89E)),
           color: Colors.white,
           iconTheme: IconThemeData(
-            color: Colors.red,
+            color: Color(0xFF13A89E),
+          ),
+        ),
+        inputDecorationTheme: const InputDecorationTheme(
+          labelStyle: TextStyle(
+            color: Color(0xFF13A89E),
+          ),
+          fillColor: Colors.white,
+          filled: true,
+          border: OutlineInputBorder(
+            borderSide: BorderSide(color: Color(0xFF13A89E)),
+          ),
+          // enabledBorder: const OutlineInputBorder(
+          //   borderSide: BorderSide(color: Color(0xFF13A89E)),
+          // ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Color(0xFF13A89E)),
           ),
         ),
       ),

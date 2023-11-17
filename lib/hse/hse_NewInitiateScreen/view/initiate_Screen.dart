@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:petro_hse/hse/const/widgets/initiateScreen_widgets/stepper.dart';
 
 import '../../../pactices.dart';
-import '../../const/widgets/initiateScreen_widgets/initiate_feilds.dart';
+import '../../const/widgets/initiateScreen_widgets/initiate_fields.dart';
 
 class NewInitiateScreen extends StatelessWidget {
   const NewInitiateScreen({super.key});
@@ -44,8 +44,8 @@ class NewInitiateScreen extends StatelessWidget {
           children: [
              MyStepper(),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 5),
-              child: InitiateFeilds(),
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+              child: InitiateFields(),
             )
           ],
         ),

@@ -1,11 +1,13 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:petro_hse/hse/hse_initiateScreen/view/requestInitiation.dart';
 
 import '../../../../demoControllers.dart';
+import '../../../hse_initiateScreen/view/permit_authorisation.dart';
 
-class InitiateFeilds extends StatelessWidget {
-  InitiateFeilds({super.key});
+class InitiateFields extends StatelessWidget {
+  InitiateFields({super.key});
 
   final CalendarController controller = Get.put(CalendarController());
 
@@ -841,7 +843,9 @@ class Example extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ButtonsTabBar(
-            height: Get.height * 0.11,
+            physics: NeverScrollableScrollPhysics(),
+            contentPadding: EdgeInsets.symmetric(horizontal: 5),
+            height: Get.height * 0.07,
             backgroundColor: Colors.grey.shade50,
             unselectedBackgroundColor: Colors.grey.shade50,
             unselectedLabelStyle: TextStyle(color: Colors.grey.shade50),
@@ -867,20 +871,14 @@ class Example extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Expanded(
-                          flex: 3,
-                          child: Text(
-                            "Initiation",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                        )
                       ],
                     ),
                     SizedBox(
-                        height: Get.height * 0.05, child: const Text(" ---"))
+                        height: Get.height * 0.02,
+                        child: const Text(
+                          " ----",
+                          style: TextStyle(color: Colors.green),
+                        ))
                   ],
                 ),
               ),
@@ -889,7 +887,9 @@ class Example extends StatelessWidget {
                 child: Row(
                   children: [
                     SizedBox(
-                        height: Get.height * 0.05, child: const Text("---")),
+                        height: Get.height * 0.02,
+                        child: const Text("----",
+                            style: TextStyle(color: Colors.green))),
                     Column(
                       children: [
                         Expanded(
@@ -905,20 +905,12 @@ class Example extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        const Expanded(
-                          flex: 3,
-                          child: Text(
-                            "Authorisation",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                        )
                       ],
                     ),
                     SizedBox(
-                        height: Get.height * 0.05, child: const Text("---"))
+                        height: Get.height * 0.02,
+                        child: const Text("----",
+                            style: TextStyle(color: Colors.green)))
                   ],
                 ),
               ),
@@ -927,7 +919,9 @@ class Example extends StatelessWidget {
                 child: Row(
                   children: [
                     SizedBox(
-                        height: Get.height * 0.05, child: const Text("---")),
+                        height: Get.height * 0.02,
+                        child: const Text("----",
+                            style: TextStyle(color: Colors.green))),
                     Column(
                       children: [
                         Expanded(
@@ -943,20 +937,12 @@ class Example extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        const Expanded(
-                          flex: 3,
-                          child: Text(
-                            "Control",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                        )
                       ],
                     ),
                     SizedBox(
-                        height: Get.height * 0.05, child: const Text("---"))
+                        height: Get.height * 0.02,
+                        child: const Text("----   ",
+                            style: TextStyle(color: Colors.green)))
                   ],
                 ),
               ),
@@ -965,7 +951,9 @@ class Example extends StatelessWidget {
                 child: Row(
                   children: [
                     SizedBox(
-                        height: Get.height * 0.05, child: const Text("---")),
+                        height: Get.height * 0.02,
+                        child: const Text("----",
+                            style: TextStyle(color: Colors.green))),
                     Column(
                       children: [
                         Expanded(
@@ -981,22 +969,44 @@ class Example extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        const Expanded(
-                          flex: 3,
-                          child: Text(
-                            "Cancellation",
-                            style: TextStyle(color: Colors.black),
-                          ),
-                        ),
                       ],
                     ),
                   ],
                 ),
               ),
             ],
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  children: [
+                    Text("Request"),
+                    Text("Initiation"),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text("Permit"),
+                    Text("Authorisation"),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text("Issue &"),
+                    Text("Control"),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text("Cancellation"),
+                    Text("& Archive"),
+                  ],
+                )
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
@@ -1125,41 +1135,36 @@ class Example extends StatelessWidget {
                         content: Padding(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 5, vertical: 5),
-                          child: InitiateFeilds(),
+                          child: InitiateFields(),
                         ),
                       ),
-                      const ExpandableListItem(
-                        colors: Color(0xFF13A89E),
-                        title: "Identify Activities",
-                        icon: Icons.person,
-                        content:
-                            YourLargeWidgetHere("Identify Activities Content"),
-                      ),
+                      ExpandableListItem(
+                          colors: Color(0xFF13A89E),
+                          title: "Identify Activities",
+                          icon: Icons.person,
+                          content: IdentifyActivities()),
                       ExpandableListItem(
                         colors: const Color(0xFF13A89E),
                         title: "Attach Certificates",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: CertificateForm(),
                       ),
                       const ExpandableListItem(
-                        colors: Color(0xFF13A89E),
-                        title: "Gas Test Requirements",
-                        icon: Icons.person,
-                        content:
-                            YourLargeWidgetHere("Identify Activities Content"),
-                      ),
+                          colors: Color(0xFF13A89E),
+                          title: "Gas Test Requirements",
+                          icon: Icons.person,
+                          content: GasSelectionScreen()),
                       ExpandableListItem(
                         colors: Colors.deepOrangeAccent,
                         title: "Work Site Examination",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: WorkSite(),
                       ),
                       const ExpandableListItem(
                         colors: Colors.deepOrangeAccent,
                         title: "Agreement of other custodians",
                         icon: Icons.person,
-                        content:
-                            YourLargeWidgetHere("Identify Activities Content"),
+                        content: AgreementOfCustodian(),
                       ),
                     ],
                   ),
@@ -1170,20 +1175,19 @@ class Example extends StatelessWidget {
                         colors: const Color(0xFF13A89E),
                         title: "Authorisation",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: Authorisation(),
                       ),
-                      const ExpandableListItem(
+                      ExpandableListItem(
                         colors: Color(0xFF13A89E),
                         title: "Brief of Permit Holder",
                         icon: Icons.person,
-                        content:
-                            YourLargeWidgetHere("Identify Activities Content"),
+                        content: PermitHolder(),
                       ),
                       ExpandableListItem(
                         colors: const Color(0xFF13A89E),
                         title: "Gas Test ",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: GasTest(),
                       ),
                       const ExpandableListItem(
                         colors: Color(0xFF13A89E),
@@ -1196,7 +1200,7 @@ class Example extends StatelessWidget {
                         colors: const Color(0xFF13A89E),
                         title: "Confirmation by PH",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: InitiateFields(),
                       ),
                       const ExpandableListItem(
                         colors: Colors.deepOrangeAccent,
@@ -1214,7 +1218,7 @@ class Example extends StatelessWidget {
                         colors: Colors.deepOrangeAccent,
                         title: "Accept Permit",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: InitiateFields(),
                       ),
                       const ExpandableListItem(
                         colors: Color(0xFF13A89E),
@@ -1232,7 +1236,7 @@ class Example extends StatelessWidget {
                         colors: const Color(0xFF13A89E),
                         title: "Permit Return by PH",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: InitiateFields(),
                       ),
                       const ExpandableListItem(
                         colors: Color(0xFF13A89E),
@@ -1245,7 +1249,7 @@ class Example extends StatelessWidget {
                         colors: const Color(0xFF13A89E),
                         title: "Lessons learned",
                         icon: Icons.person,
-                        content: InitiateFeilds(),
+                        content: InitiateFields(),
                       ),
                     ],
                   ),
