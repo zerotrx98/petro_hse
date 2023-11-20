@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:petro_hse/hse/hse_initiateScreen/view/requestInitiation.dart';
 
 import '../../../../demoControllers.dart';
+import '../../../hse_initiateScreen/view/Issue&Control.dart';
+import '../../../hse_initiateScreen/view/cancellation&Archive.dart';
 import '../../../hse_initiateScreen/view/permit_authorisation.dart';
 
 class InitiateFields extends StatelessWidget {
@@ -839,174 +841,191 @@ class Example extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
+      animationDuration: Duration.zero,
       length: 4,
       child: Column(
         children: <Widget>[
-          ButtonsTabBar(
-            physics: const NeverScrollableScrollPhysics(),
-            contentPadding: const EdgeInsets.symmetric(horizontal: 5),
-            height: Get.height * 0.07,
-            backgroundColor: Colors.grey.shade50,
-            unselectedBackgroundColor: Colors.grey.shade50,
-            unselectedLabelStyle: TextStyle(color: Colors.grey.shade50),
-            labelStyle: const TextStyle(
-                color: Color(0xFF13A89E), fontWeight: FontWeight.bold),
-            tabs: [
-              Tab(
-                // text: tabName,
-                child: Row(
-                  children: [
-                    Column(
-                      children: [
-                        Expanded(
-                          flex: 6,
-                          child: Container(
-                            padding: const EdgeInsets.all(15),
-                            decoration: BoxDecoration(
-                                color: Colors.green,
-                                borderRadius: BorderRadius.circular(10)),
-                            child: const Icon(
-                              Icons.check_circle_outlined,
-                              color: Colors.white,
+          Center(
+            child: ButtonsTabBar(
+              physics: const NeverScrollableScrollPhysics(),
+              height: Get.height * 0.07,
+              contentPadding: EdgeInsets.only(),
+              backgroundColor: Colors.transparent,
+              unselectedBackgroundColor: Colors.transparent,
+              unselectedLabelStyle: TextStyle(color: Colors.grey.shade50),
+              labelStyle: const TextStyle(
+                  color: Color(0xFF13A89E), fontWeight: FontWeight.bold),
+              tabs: [
+                Tab(
+                  // text: tabName,
+                  child: Row(
+                    children: [
+                      SizedBox(
+                          height: Get.height * 0.02,
+                          child: const Text(
+                            "",
+                            style: TextStyle(color: Colors.green),
+                          )),
+                      Column(
+                        children: [
+                          Expanded(
+                            flex: 6,
+                            child: Container(
+                              padding: const EdgeInsets.all(15),
+                              decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: const Icon(
+                                Icons.check_circle_outlined,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                        height: Get.height * 0.02,
-                        child: const Text(
-                          " ----",
-                          style: TextStyle(color: Colors.green),
-                        ))
-                  ],
+                        ],
+                      ),
+                      SizedBox(
+                          height: Get.height * 0.02,
+                          child: const Text(
+                            "-----",
+                            style: TextStyle(color: Colors.green),
+                          ))
+                    ],
+                  ),
                 ),
-              ),
-              Tab(
-                // text: tabName,
-                child: Row(
-                  children: [
-                    SizedBox(
-                        height: Get.height * 0.02,
-                        child: const Text("----",
-                            style: TextStyle(color: Colors.green))),
-                    Column(
-                      children: [
-                        Expanded(
-                          flex: 6,
-                          child: Container(
-                            padding: const EdgeInsets.all(15),
-                            decoration: BoxDecoration(
-                                color: Colors.green,
-                                borderRadius: BorderRadius.circular(10)),
-                            child: const Icon(
-                              Icons.check_circle_outlined,
-                              color: Colors.white,
+                Tab(
+                  // text: tabName,
+                  child: Row(
+                    children: [
+                      SizedBox(
+                          height: Get.height * 0.02,
+                          child: const Text("-----",
+                              style: TextStyle(color: Colors.green))),
+                      Column(
+                        children: [
+                          Expanded(
+                            flex: 6,
+                            child: Container(
+                              padding: const EdgeInsets.all(15),
+                              decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: const Icon(
+                                Icons.check_circle_outlined,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                        height: Get.height * 0.02,
-                        child: const Text("----",
-                            style: TextStyle(color: Colors.green)))
-                  ],
+                        ],
+                      ),
+                      SizedBox(
+                          height: Get.height * 0.02,
+                          child: const Text("-----",
+                              style: TextStyle(color: Colors.green)))
+                    ],
+                  ),
                 ),
-              ),
-              Tab(
-                // text: tabName,
-                child: Row(
-                  children: [
-                    SizedBox(
-                        height: Get.height * 0.02,
-                        child: const Text("----",
-                            style: TextStyle(color: Colors.green))),
-                    Column(
-                      children: [
-                        Expanded(
-                          flex: 6,
-                          child: Container(
-                            padding: const EdgeInsets.all(15),
-                            decoration: BoxDecoration(
-                                color: Colors.green,
-                                borderRadius: BorderRadius.circular(10)),
-                            child: const Icon(
-                              Icons.check_circle_outlined,
-                              color: Colors.white,
+                Tab(
+                  // text: tabName,
+                  child: Row(
+                    children: [
+                      SizedBox(
+                          height: Get.height * 0.02,
+                          child: const Text("-----",
+                              style: TextStyle(color: Colors.green))),
+                      Column(
+                        children: [
+                          Expanded(
+                            flex: 6,
+                            child: Container(
+                              padding: const EdgeInsets.all(15),
+                              decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: const Icon(
+                                Icons.check_circle_outlined,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                        height: Get.height * 0.02,
-                        child: const Text("----   ",
-                            style: TextStyle(color: Colors.green)))
-                  ],
+                        ],
+                      ),
+                      SizedBox(
+                          height: Get.height * 0.02,
+                          child: const Text("-----",
+                              style: TextStyle(color: Colors.green)))
+                    ],
+                  ),
                 ),
-              ),
-              Tab(
-                // text: tabName,
-                child: Row(
-                  children: [
-                    SizedBox(
-                        height: Get.height * 0.02,
-                        child: const Text("----",
-                            style: TextStyle(color: Colors.green))),
-                    Column(
-                      children: [
-                        Expanded(
-                          flex: 6,
-                          child: Container(
-                            padding: const EdgeInsets.all(15),
-                            decoration: BoxDecoration(
-                                color: Colors.orangeAccent,
-                                borderRadius: BorderRadius.circular(10)),
-                            child: const Icon(
-                              Icons.multiple_stop,
-                              color: Colors.white,
+                Tab(
+                  // text: tabName,
+                  child: Row(
+                    children: [
+                      SizedBox(
+                          height: Get.height * 0.02,
+                          child: const Text("-----",
+                              style: TextStyle(color: Colors.green))),
+                      Column(
+                        children: [
+                          Expanded(
+                            flex: 6,
+                            child: Container(
+                              padding: const EdgeInsets.all(15),
+                              decoration: BoxDecoration(
+                                  color: Colors.orangeAccent,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: const Icon(
+                                Icons.multiple_stop,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                        ],
+                      ),
+                      SizedBox(
+                          height: Get.height * 0.02,
+                          child: const Text("",
+                              style: TextStyle(color: Colors.green))),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
+          const Row(
+            children: [
+              Expanded(
+                child: Column(
                   children: [
                     Text("Request"),
                     Text("Initiation"),
                   ],
                 ),
-                Column(
+              ),
+              Expanded(
+                child: Column(
                   children: [
                     Text("Permit"),
                     Text("Authorisation"),
                   ],
                 ),
-                Column(
+              ),
+              Expanded(
+                child: Column(
                   children: [
                     Text("Issue &"),
                     Text("Control"),
                   ],
                 ),
-                Column(
+              ),
+              Expanded(
+                child: Column(
                   children: [
                     Text("Cancellation"),
                     Text("& Archive"),
                   ],
-                )
-              ],
-            ),
+                ),
+              ),
+            ],
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
@@ -1194,13 +1213,13 @@ class Example extends StatelessWidget {
                           title: "Isolation",
                           icon: Icons.person,
                           content: Isolation()),
-                      ExpandableListItem(
-                        colors: const Color(0xFF13A89E),
+                      const ExpandableListItem(
+                        colors: Color(0xFF13A89E),
                         title: "Confirmation by PH",
                         icon: Icons.person,
                         content: ConfirmationByPh(),
                       ),
-                      ExpandableListItem(
+                      const ExpandableListItem(
                           colors: Colors.deepOrangeAccent,
                           title: "Validate Permit",
                           icon: Icons.person,
@@ -1209,43 +1228,39 @@ class Example extends StatelessWidget {
                   ),
                   ListView(
                     // Wrap in a ListView
-                    children: [
+                    children: const [
                       ExpandableListItem(
                         colors: Colors.deepOrangeAccent,
                         title: "Accept Permit",
                         icon: Icons.person,
-                        content: InitiateFields(),
+                        content: AcceptPermit(),
                       ),
-                      const ExpandableListItem(
-                        colors: Color(0xFF13A89E),
-                        title: "Work Completion",
-                        icon: Icons.person,
-                        content:
-                            YourLargeWidgetHere("Identify Activities Content"),
-                      ),
+                      ExpandableListItem(
+                          colors: Color(0xFF13A89E),
+                          title: "Work Completion",
+                          icon: Icons.person,
+                          content: WorkCompletion()),
                     ],
                   ),
                   ListView(
                     // Wrap in a ListView
                     children: [
-                      ExpandableListItem(
-                        colors: const Color(0xFF13A89E),
-                        title: "Permit Return by PH",
-                        icon: Icons.person,
-                        content: InitiateFields(),
-                      ),
                       const ExpandableListItem(
                         colors: Color(0xFF13A89E),
-                        title: "Cancellation by Area Authority",
+                        title: "Permit Return by PH",
                         icon: Icons.person,
-                        content:
-                            YourLargeWidgetHere("Identify Activities Content"),
+                        content: PermitReturn(),
                       ),
+                      const ExpandableListItem(
+                          colors: Color(0xFF13A89E),
+                          title: "Cancellation by Area Authority",
+                          icon: Icons.person,
+                          content: Cancellation()),
                       ExpandableListItem(
                         colors: const Color(0xFF13A89E),
                         title: "Lessons learned",
                         icon: Icons.person,
-                        content: InitiateFields(),
+                        content: LessonLearned(),
                       ),
                     ],
                   ),
@@ -1320,20 +1335,6 @@ class _ExpandableListItemState extends State<ExpandableListItem> {
             child: widget.content,
           ),
       ],
-    );
-  }
-}
-
-class YourLargeWidgetHere extends StatelessWidget {
-  final String content;
-
-  const YourLargeWidgetHere(this.content, {super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16.0),
-      child: Text(content),
     );
   }
 }
