@@ -843,8 +843,8 @@ class Example extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ButtonsTabBar(
-            physics: NeverScrollableScrollPhysics(),
-            contentPadding: EdgeInsets.symmetric(horizontal: 5),
+            physics: const NeverScrollableScrollPhysics(),
+            contentPadding: const EdgeInsets.symmetric(horizontal: 5),
             height: Get.height * 0.07,
             backgroundColor: Colors.grey.shade50,
             unselectedBackgroundColor: Colors.grey.shade50,
@@ -861,7 +861,7 @@ class Example extends StatelessWidget {
                         Expanded(
                           flex: 6,
                           child: Container(
-                            padding: EdgeInsets.all(15),
+                            padding: const EdgeInsets.all(15),
                             decoration: BoxDecoration(
                                 color: Colors.green,
                                 borderRadius: BorderRadius.circular(10)),
@@ -895,7 +895,7 @@ class Example extends StatelessWidget {
                         Expanded(
                           flex: 6,
                           child: Container(
-                            padding: EdgeInsets.all(15),
+                            padding: const EdgeInsets.all(15),
                             decoration: BoxDecoration(
                                 color: Colors.green,
                                 borderRadius: BorderRadius.circular(10)),
@@ -927,7 +927,7 @@ class Example extends StatelessWidget {
                         Expanded(
                           flex: 6,
                           child: Container(
-                            padding: EdgeInsets.all(15),
+                            padding: const EdgeInsets.all(15),
                             decoration: BoxDecoration(
                                 color: Colors.green,
                                 borderRadius: BorderRadius.circular(10)),
@@ -959,7 +959,7 @@ class Example extends StatelessWidget {
                         Expanded(
                           flex: 6,
                           child: Container(
-                            padding: EdgeInsets.all(15),
+                            padding: const EdgeInsets.all(15),
                             decoration: BoxDecoration(
                                 color: Colors.orangeAccent,
                                 borderRadius: BorderRadius.circular(10)),
@@ -1139,7 +1139,7 @@ class Example extends StatelessWidget {
                         ),
                       ),
                       ExpandableListItem(
-                          colors: Color(0xFF13A89E),
+                          colors: const Color(0xFF13A89E),
                           title: "Identify Activities",
                           icon: Icons.person,
                           content: IdentifyActivities()),
@@ -1178,7 +1178,7 @@ class Example extends StatelessWidget {
                         content: Authorisation(),
                       ),
                       ExpandableListItem(
-                        colors: Color(0xFF13A89E),
+                        colors: const Color(0xFF13A89E),
                         title: "Brief of Permit Holder",
                         icon: Icons.person,
                         content: PermitHolder(),
@@ -1189,26 +1189,22 @@ class Example extends StatelessWidget {
                         icon: Icons.person,
                         content: GasTest(),
                       ),
-                      const ExpandableListItem(
-                        colors: Color(0xFF13A89E),
-                        title: "Isolation",
-                        icon: Icons.person,
-                        content:
-                            YourLargeWidgetHere("Identify Activities Content"),
-                      ),
+                      ExpandableListItem(
+                          colors: const Color(0xFF13A89E),
+                          title: "Isolation",
+                          icon: Icons.person,
+                          content: Isolation()),
                       ExpandableListItem(
                         colors: const Color(0xFF13A89E),
                         title: "Confirmation by PH",
                         icon: Icons.person,
-                        content: InitiateFields(),
+                        content: ConfirmationByPh(),
                       ),
-                      const ExpandableListItem(
-                        colors: Colors.deepOrangeAccent,
-                        title: "Validate Permit",
-                        icon: Icons.person,
-                        content:
-                            YourLargeWidgetHere("Identify Activities Content"),
-                      ),
+                      ExpandableListItem(
+                          colors: Colors.deepOrangeAccent,
+                          title: "Validate Permit",
+                          icon: Icons.person,
+                          content: ValidatePermit()),
                     ],
                   ),
                   ListView(
