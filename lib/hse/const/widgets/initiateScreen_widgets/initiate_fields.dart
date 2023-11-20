@@ -860,12 +860,6 @@ class Example extends StatelessWidget {
                   // text: tabName,
                   child: Row(
                     children: [
-                      SizedBox(
-                          height: Get.height * 0.02,
-                          child: const Text(
-                            "",
-                            style: TextStyle(color: Colors.green),
-                          )),
                       Column(
                         children: [
                           Expanded(
@@ -883,12 +877,10 @@ class Example extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
-                          height: Get.height * 0.02,
-                          child: const Text(
-                            "-----",
-                            style: TextStyle(color: Colors.green),
-                          ))
+                      Text(
+                        "--------",
+                        style: TextStyle(color: Colors.green),
+                      )
                     ],
                   ),
                 ),
@@ -896,10 +888,6 @@ class Example extends StatelessWidget {
                   // text: tabName,
                   child: Row(
                     children: [
-                      SizedBox(
-                          height: Get.height * 0.02,
-                          child: const Text("-----",
-                              style: TextStyle(color: Colors.green))),
                       Column(
                         children: [
                           Expanded(
@@ -917,10 +905,8 @@ class Example extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
-                          height: Get.height * 0.02,
-                          child: const Text("-----",
-                              style: TextStyle(color: Colors.green)))
+                      const Text("-----------",
+                          style: TextStyle(color: Colors.green))
                     ],
                   ),
                 ),
@@ -928,10 +914,10 @@ class Example extends StatelessWidget {
                   // text: tabName,
                   child: Row(
                     children: [
-                      SizedBox(
-                          height: Get.height * 0.02,
-                          child: const Text("-----",
-                              style: TextStyle(color: Colors.green))),
+                      // SizedBox(
+                      //     height: Get.height * 0.02,
+                      //     child: const Text("",
+                      //         style: TextStyle(color: Colors.green))),
                       Column(
                         children: [
                           Expanded(
@@ -949,10 +935,8 @@ class Example extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
-                          height: Get.height * 0.02,
-                          child: const Text("-----",
-                              style: TextStyle(color: Colors.green)))
+                      const Text("------------",
+                          style: TextStyle(color: Colors.green))
                     ],
                   ),
                 ),
@@ -962,7 +946,7 @@ class Example extends StatelessWidget {
                     children: [
                       SizedBox(
                           height: Get.height * 0.02,
-                          child: const Text("-----",
+                          child: const Text("",
                               style: TextStyle(color: Colors.green))),
                       Column(
                         children: [
@@ -981,10 +965,7 @@ class Example extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
-                          height: Get.height * 0.02,
-                          child: const Text("",
-                              style: TextStyle(color: Colors.green))),
+                      const Text("", style: TextStyle(color: Colors.green)),
                     ],
                   ),
                 ),
