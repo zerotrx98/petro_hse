@@ -841,168 +841,272 @@ class Example extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      animationDuration: Duration.zero,
       length: 4,
       child: Column(
         children: <Widget>[
-          Center(
-            child: ButtonsTabBar(
-              physics: const NeverScrollableScrollPhysics(),
-              height: Get.height * 0.07,
-              contentPadding: EdgeInsets.only(),
-              backgroundColor: Colors.transparent,
-              unselectedBackgroundColor: Colors.transparent,
-              unselectedLabelStyle: TextStyle(color: Colors.grey.shade50),
-              labelStyle: const TextStyle(
-                  color: Color(0xFF13A89E), fontWeight: FontWeight.bold),
-              tabs: [
-                Tab(
-                  // text: tabName,
-                  child: Row(
-                    children: [
-                      Column(
-                        children: [
-                          Expanded(
-                            flex: 6,
-                            child: Container(
-                              padding: const EdgeInsets.all(15),
-                              decoration: BoxDecoration(
-                                  color: Colors.green,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: const Icon(
-                                Icons.check_circle_outlined,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Text(
-                        "--------",
-                        style: TextStyle(color: Colors.green),
-                      )
-                    ],
-                  ),
-                ),
-                Tab(
-                  // text: tabName,
-                  child: Row(
-                    children: [
-                      Column(
-                        children: [
-                          Expanded(
-                            flex: 6,
-                            child: Container(
-                              padding: const EdgeInsets.all(15),
-                              decoration: BoxDecoration(
-                                  color: Colors.green,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: const Icon(
-                                Icons.check_circle_outlined,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const Text("-----------",
-                          style: TextStyle(color: Colors.green))
-                    ],
-                  ),
-                ),
-                Tab(
-                  // text: tabName,
-                  child: Row(
-                    children: [
-                      // SizedBox(
-                      //     height: Get.height * 0.02,
-                      //     child: const Text("",
-                      //         style: TextStyle(color: Colors.green))),
-                      Column(
-                        children: [
-                          Expanded(
-                            flex: 6,
-                            child: Container(
-                              padding: const EdgeInsets.all(15),
-                              decoration: BoxDecoration(
-                                  color: Colors.green,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: const Icon(
-                                Icons.check_circle_outlined,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const Text("------------",
-                          style: TextStyle(color: Colors.green))
-                    ],
-                  ),
-                ),
-                Tab(
-                  // text: tabName,
-                  child: Row(
-                    children: [
-                      SizedBox(
-                          height: Get.height * 0.02,
-                          child: const Text("",
-                              style: TextStyle(color: Colors.green))),
-                      Column(
-                        children: [
-                          Expanded(
-                            flex: 6,
-                            child: Container(
-                              padding: const EdgeInsets.all(15),
-                              decoration: BoxDecoration(
-                                  color: Colors.orangeAccent,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: const Icon(
-                                Icons.multiple_stop,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const Text("", style: TextStyle(color: Colors.green)),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const Row(
-            children: [
-              Expanded(
-                child: Column(
+          ButtonsTabBar(
+            physics: const NeverScrollableScrollPhysics(),
+            height: Get.height * 0.12,
+            contentPadding: const EdgeInsets.only(),
+            backgroundColor: Colors.transparent,
+            unselectedBackgroundColor: Colors.transparent,
+            unselectedLabelStyle: TextStyle(color: Colors.grey.shade50),
+            labelStyle: const TextStyle(
+                color: Color(0xFF13A89E), fontWeight: FontWeight.bold),
+            tabs: [
+              Tab(
+                // text: tabName,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("Request"),
-                    Text("Initiation"),
+                    Container(
+                      height: 65,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            // You can change the shadow color
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0,
+                                3), // You can adjust the position of the shadow
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        children: [
+                          Expanded(
+                            flex: 6,
+                            child: Icon(
+                              Icons.check_circle_outlined,
+                              color: Colors.green,
+                              size: 25,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 4,
+                            child: Column(
+                              children: [
+                                Text(
+                                  'Request',
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Initiation",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Text(
+                      "-------",
+                      style: TextStyle(color: Colors.green),
+                    )
                   ],
                 ),
               ),
-              Expanded(
-                child: Column(
+              Tab(
+                // text: tabName,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("Permit"),
-                    Text("Authorisation"),
+                    Container(
+                      height: 65,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            // You can change the shadow color
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0,
+                                3), // You can adjust the position of the shadow
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        children: [
+                          Expanded(
+                            flex: 6,
+                            child: Icon(
+                              Icons.check_circle_outlined,
+                              color: Colors.green,
+                              size: 25,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 4,
+                            child: Column(
+                              children: [
+                                Text(
+                                  'Permit',
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Authorisation",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Text(
+                      "--------",
+                      style: TextStyle(color: Colors.green),
+                    )
                   ],
                 ),
               ),
-              Expanded(
-                child: Column(
+              Tab(
+                // text: tabName,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("Issue &"),
-                    Text("Control"),
+                    Container(
+                      height: 65,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            // You can change the shadow color
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0,
+                                3), // You can adjust the position of the shadow
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        children: [
+                          Expanded(
+                            flex: 6,
+                            child: Icon(
+                              Icons.check_circle_outlined,
+                              color: Colors.green,
+                              size: 25,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 4,
+                            child: Column(
+                              children: [
+                                Text(
+                                  'Issue',
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "& Control",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Text(
+                      "--------",
+                      style: TextStyle(color: Colors.green),
+                    )
                   ],
                 ),
               ),
-              Expanded(
-                child: Column(
+              Tab(
+                // text: tabName,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("Cancellation"),
-                    Text("& Archive"),
+                    Container(
+                      height: 65,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            // You can change the shadow color
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0,
+                                3), // You can adjust the position of the shadow
+                          ),
+                        ],
+                      ),
+                      child: const Column(
+                        children: [
+                          Expanded(
+                            flex: 6,
+                            child: Icon(
+                              Icons.close_rounded,
+                              color: Colors.orangeAccent,
+                              size: 25,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 4,
+                            child: Column(
+                              children: [
+                                Text(
+                                  'Cancellation',
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "& Archive",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -1012,7 +1116,7 @@ class Example extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
             child: Container(
               height: Get.height * 0.09,
-              width: Get.width,
+              width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: Colors.grey.shade200,
