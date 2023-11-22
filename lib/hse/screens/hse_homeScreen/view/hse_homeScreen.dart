@@ -3,8 +3,9 @@ import 'package:d_chart/ordinal/bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:petro_hse/hse/const/widgets/homeScreen_widgets/hse_homeWidgets.dart';
-import 'package:petro_hse/pactices.dart';
-import 'package:petro_hse/routes/hse_routes.dart';
+import 'package:petro_hse/practices.dart';
+
+import '../../../routes/hse_routes.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -30,10 +31,11 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
         leading: Container(
-
           decoration: const BoxDecoration(
-              image:
-                  DecorationImage(image: AssetImage("assets/logod.png",))),
+              image: DecorationImage(
+                  image: AssetImage(
+            "assets/logod.png",
+          ))),
         ),
         actions: [
           Padding(
@@ -143,7 +145,6 @@ class HomeScreen extends StatelessWidget {
                           )
                         ],
                       ),
-
                       AspectRatio(
                         aspectRatio: 15 / 11,
                         child: DChartBarO(
@@ -172,7 +173,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric( horizontal: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 5),
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -215,7 +216,7 @@ class HomeScreen extends StatelessWidget {
                             headingRowColor: MaterialStateProperty.all<Color>(
                                 Colors.cyan.shade100),
                             decoration:
-                            BoxDecoration(color: Colors.grey.shade200),
+                                BoxDecoration(color: Colors.grey.shade200),
                             columnSpacing: 20,
                             columns: [
                               DataColumn(
@@ -258,9 +259,9 @@ class HomeScreen extends StatelessWidget {
                                     Center(
                                       child: Column(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Request Initiation - Add Work Description',
@@ -284,9 +285,9 @@ class HomeScreen extends StatelessWidget {
                                     Center(
                                       child: Column(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Cancellation & Archive  - Lesson Learned',
@@ -308,9 +309,9 @@ class HomeScreen extends StatelessWidget {
                                     Center(
                                       child: Column(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Request Initiation - Add Work Description',
@@ -334,9 +335,9 @@ class HomeScreen extends StatelessWidget {
                                     Center(
                                       child: Column(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Request Initiation - Add Work Description',
