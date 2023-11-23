@@ -16,7 +16,7 @@ class Routes {
 
   static List<GetPage> pages = [
     GetPage(name: homeScreen, page: () => const HomeScreen()),
-    GetPage(name: secHomeScreen, page: () => const SecHomeScreen()),
+    GetPage(name: secHomeScreen, page: () => SecHomeScreen()),
     GetPage(name: newInitiateScreen, page: () => const NewInitiateScreen()),
     GetPage(name: initiateScreen, page: () => InitiateCustomStepper()),
     GetPage(name: loginScreen, page: () => const LoginScreen())

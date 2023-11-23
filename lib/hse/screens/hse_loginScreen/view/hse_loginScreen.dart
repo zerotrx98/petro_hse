@@ -4,21 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../routes/hse_routes.dart';
-
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
-
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
-
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController emailController = TextEditingController();
-
   final TextEditingController passwordController = TextEditingController();
-
   bool _isPasswordVisible = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
