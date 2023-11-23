@@ -27,7 +27,6 @@ class CalendarController extends GetxController {
   }
 }
 
-
 class TabController extends GetxController {
   var selectedIndex = 0.obs;
 
@@ -35,6 +34,7 @@ class TabController extends GetxController {
     selectedIndex.value = index;
   }
 }
+
 class BottomSheetController extends GetxController {
   final isOpen = false.obs;
 

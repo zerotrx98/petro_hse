@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:petro_hse/routes/hse_routes.dart';
+
+import 'hse/routes/hse_routes.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,9 +41,6 @@ class MyApp extends StatelessWidget {
           border: OutlineInputBorder(
             borderSide: BorderSide(color: Color(0xFF13A89E)),
           ),
-          // enabledBorder: const OutlineInputBorder(
-          //   borderSide: BorderSide(color: Color(0xFF13A89E)),
-          // ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Color(0xFF13A89E)),
           ),
